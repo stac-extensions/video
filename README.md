@@ -21,9 +21,9 @@ The motivation behind this extension is to provide a standardized way to include
 | Field Name        | Type       | Description                                                                                                                                  |
 | ----------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | video:motion-type | string     | **REQUIRED**. One of `full` (full motion video) or `stationary` (frames and sensor positions remain stationary)                              |
+| video:shape       | \[integer] | **REQUIRED**. Pixel dimensions of video, expressed as `[rows, columns]`                                                                      |
 | video:frame-rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame-rate` or `video:frame-count` are highly recommended. |
 | video:frame-count | integer    | The count of frames in the video. Either `video:frame-rate` or `video:frame-count` are highly recommended.                                   |
-| video:shape       | \[integer] | Pixel dimensions of video, expressed as `[rows, columns]`                                                                                    |
 | video:code_name   | string     | Four-letter codec code ([list](https://www.fourcc.org/codecs.php))                                                                           |
 
 ### Assets

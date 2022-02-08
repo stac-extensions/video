@@ -21,7 +21,7 @@
               "allOf": [
                 {
                   "$comment": "Require fields here for Item Properties.",
-                  "required": ["video:motion-type"]
+                  "required": ["video:motion-type", "video:shape"]
                 },
                 {
                   "$ref": "#/definitions/fields"
