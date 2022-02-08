@@ -7,7 +7,7 @@
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @darrenwiens
 
-This document explains the Template Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
+This document explains the Video Extension to the [SpatioTemporal Asset Catalog](https://github.com/radiantearth/stac-spec) (STAC) specification.
 
 The motivation behind this extension is to provide a standardized way to include various video sources within STAC Items.
 
@@ -20,7 +20,7 @@ The motivation behind this extension is to provide a standardized way to include
 
 | Field Name        | Type       | Description                                                                                                                                  |
 | ----------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| video:motion-type | string     | One of `full` (full motion video) or `stationary` (frames and sensor positions remain stationary)                                            |
+| video:motion-type | string     | **REQUIRED**. One of `full` (full motion video) or `stationary` (frames and sensor positions remain stationary)                              |
 | video:frame-rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame-rate` or `video:frame-count` are highly recommended. |
 | video:frame-count | integer    | The count of frames in the video. Either `video:frame-rate` or `video:frame-count` are highly recommended.                                   |
 | video:shape       | \[integer] | Pixel dimensions of video, expressed as `[rows, columns]`                                                                                    |
