@@ -33,7 +33,8 @@
               "type": "object",
               "additionalProperties": {
                 "$ref": "#/definitions/fields"
-              }
+              },
+              "required": ["video"]
             }
           }
         }
