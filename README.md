@@ -24,7 +24,7 @@ The motivation behind this extension is to provide a standardized way to include
 | video:shape       | \[integer] | **REQUIRED**. Pixel dimensions of video, expressed as `[rows, columns]`                                                                      |
 | video:frame-rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame-rate` or `video:frame-count` are highly recommended. |
 | video:frame-count | integer    | The count of frames in the video. Either `video:frame-rate` or `video:frame-count` are highly recommended.                                   |
-| video:code_name   | string     | Four-letter codec code ([list](https://www.fourcc.org/codecs.php))                                                                           |
+| video:codec_name   | string     | Four-letter codec code ([list](https://www.fourcc.org/codecs.php))                                                                           |
 
 ### Assets
 
