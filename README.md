@@ -20,11 +20,11 @@ The motivation behind this extension is to provide a standardized way to include
 
 | Field Name        | Type       | Description                                                                                                                                  |
 | ----------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| video:motion-type | string     | **REQUIRED**. One of `full` (full motion video) or `stationary` (frames and sensor positions remain stationary)                              |
+| video:motion_type | string     | **REQUIRED**. One of `full` (full motion video) or `stationary` (frames and sensor positions remain stationary)                              |
 | video:shape       | \[integer] | **REQUIRED**. Pixel dimensions of video, expressed as `[rows, columns]`                                                                      |
-| video:frame-rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame-rate` or `video:frame-count` are highly recommended. |
-| video:frame-count | integer    | The count of frames in the video. Either `video:frame-rate` or `video:frame-count` are highly recommended.                                   |
-| video:codec-name   | string     | Four-letter codec code ([list](https://www.fourcc.org/codecs.php))                                                                           |
+| video:frame_rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame_rate` or `video:frame_count` are highly recommended. |
+| video:frame_count | integer    | The count of frames in the video. Either `video:frame_rate` or `video:frame_count` are highly recommended.                                   |
+| video:codec_name   | string     | Four-letter codec code ([list](https://www.fourcc.org/codecs.php))                                                                           |
 
 ### Assets
 
@@ -32,9 +32,9 @@ The following assets should be included:
 | Asset Name | MIME Type | Description |
 | -------------------- | -------------------- | -------------------------------------------- |
 | video | Asset specific | **REQUIRED**. Path to video asset. |
-| video:frame-geometry | application/geo+json | Polygon geometry(s) representing the corners of video frames. This should be a GeoJSON Feature Collection containing: 1 polygon if `video:motion-type=stationary`, or n polygons, where `n=video:frame-count` if `video:motion-type=full`. |
-| video:frame-center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion-type=stationary`, or n points, where `n=video:frame-count` if `video:motion-type=full`. |
-| video:sensor-center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion-type=stationary`, or n points, where `n=video:frame-count` if `video:motion-type=full` |
+| video:frame_geometry | application/geo+json | Polygon geometry(s) representing the corners of video frames. This should be a GeoJSON Feature Collection containing: 1 polygon if `video:motion_type=stationary`, or n polygons, where `n=video:frame_count` if `video:motion_type=full`. |
+| video:frame_center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion_type=stationary`, or n points, where `n=video:frame_count` if `video:motion_type=full`. |
+| video:sensor_center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion_type=stationary`, or n points, where `n=video:frame_count` if `video:motion_type=full` |
 
 ## Contributing
 
