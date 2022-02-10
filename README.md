@@ -34,7 +34,7 @@ The following assets should be included:
 | video | Asset specific | **REQUIRED**. Path to video asset. |
 | video:frame_geometry | application/geo+json | Polygon geometry(s) representing the corners of video frames. This should be a GeoJSON Feature Collection containing: 1 polygon if `video:motion_type=stationary`, or n polygons, where `n=video:frame_count` if `video:motion_type=full`. |
 | video:frame_center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion_type=stationary`, or n points, where `n=video:frame_count` if `video:motion_type=full`. |
-| video:sensor_center | application/geo+json | Point geometry(s) representing the center of video frames. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion_type=stationary`, or n points, where `n=video:frame_count` if `video:motion_type=full` |
+| video:sensor_center | application/geo+json | Point geometry(s) representing the location of the sensor. This should be a GeoJSON Feature Collection containing: 1 point if `video:motion_type=stationary`, or n points, where `n=video:frame_count` if `video:motion_type=full` |
 
 ## Contributing
 
