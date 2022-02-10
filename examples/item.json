@@ -21,7 +21,7 @@
       1080,
       1920
     ],
-    "video:codec_name": "h264",
+    "video:codec-name": "h264",
     "datetime": "2012-09-19T20:50:26.484970Z"
   },
   "geometry": {
