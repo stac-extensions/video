@@ -14,14 +14,14 @@
     "start_datetime": "2012-09-19T20:50:26.484970Z",
     "end_datetime": "2012-09-19T20:52:54.296682Z",
     "proj:epsg": 4326,
-    "video:frame-rate": 29.97002997002997,
-    "video:frame-count": 4441,
-    "video:motion-type": "full",
+    "video:frame_rate": 29.97002997002997,
+    "video:frame_count": 4441,
+    "video:motion_type": "full",
     "video:shape": [
       1080,
       1920
     ],
-    "video:codec-name": "h264",
+    "video:codec_name": "h264",
     "datetime": "2012-09-19T20:50:26.484970Z"
   },
   "geometry": {
@@ -67,17 +67,17 @@
         "data"
       ]
     },
-    "video:frame-centers": {
+    "video:frame_centers": {
       "title": "frame_centers",
       "href": "path/to/frame_centers.geojson",
       "type": "application/geo+json"
     },
-    "video:frame-geometries": {
+    "video:frame_geometries": {
       "title": "frame_geometries",
       "href": "path/to/frame_geometries.geojson",
       "type": "application/geo+json"
     },
-    "video:sensor-centers": {
+    "video:sensor_centers": {
       "title": "sensor_centers",
       "href": "path/to/sensor_centers.geojson",
       "type": "application/geo+json"
