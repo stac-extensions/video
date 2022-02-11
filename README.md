@@ -25,7 +25,7 @@ The motivation behind this extension is to provide a standardized way to include
 | video:frame_count    | integer    | The count of frames in the video. Either `video:frame_rate` or `video:frame_count` are highly recommended.                                   |
 | video:codec_name     | string     | Four-letter codec code ([list](https://mp4ra.org/#/codecs#))                                                                                 |
 | video:constant_scene | boolean    | Flag indicating that both the frame geometries and sensor centers remain constant throughout the video. Default is `false`.                  |
-| video:letterbox      | \[integer] | Rectangular window containing useful (non-fill) pixel values, in the form `[columns_offset, rows_offset, width, height]`                     |
+| video:letterbox      | \[integer] | Rectangular window containing useful (non-fill) pixel values, if different from `video:shape`, in the form `[columns_offset, rows_offset, width, height]`                     |
 
 ### Assets
 
