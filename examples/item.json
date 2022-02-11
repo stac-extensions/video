@@ -16,7 +16,6 @@
     "proj:epsg": 4326,
     "video:frame_rate": 29.97002997002997,
     "video:frame_count": 4441,
-    "video:motion_type": "full",
     "video:shape": [
       1080,
       1920

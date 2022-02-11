@@ -21,7 +21,7 @@
               "allOf": [
                 {
                   "$comment": "Require fields here for Item Properties.",
-                  "required": ["video:motion_type", "video:shape"]
+                  "required": ["video:shape"]
                 },
                 {
                   "$ref": "#/definitions/fields"
@@ -58,9 +58,6 @@
       "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
       "type": "object",
       "properties": {
-        "video:motion_type": {
-          "type": "string"
-        },
         "video:frame_rate": {
           "type": "number"
         },
@@ -75,6 +72,10 @@
         },
         "video:codec_name": {
           "type": "string"
+        },
+        "video:constant_scene": {
+          "type": "boolean",
+          "default": false
         },
         "video:letterbox": {
           "type": "array",
