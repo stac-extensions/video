@@ -25,6 +25,7 @@ The motivation behind this extension is to provide a standardized way to include
 | video:frame_rate  | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame_rate` or `video:frame_count` are highly recommended. |
 | video:frame_count | integer    | The count of frames in the video. Either `video:frame_rate` or `video:frame_count` are highly recommended.                                   |
 | video:codec_name  | string     | Four-letter codec code ([list](https://mp4ra.org/#/codecs#))                                                                           |
+| video:letterbox   | \[integer] | Rectangular window containing useful (non-fill) pixel values, in the form `[columns_offset, rows_offset, width, height]`                     |
 
 ### Assets
 

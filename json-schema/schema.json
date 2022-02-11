@@ -75,6 +75,14 @@
         },
         "video:codec_name": {
           "type": "string"
+        },
+        "video:letterbox": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 4,
+          "maxItems": 4
         }
       },
       "patternProperties": {
