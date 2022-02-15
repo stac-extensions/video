@@ -11,17 +11,31 @@
   "license": "Apache-2.0",
   "extent": {
     "spatial": {
-      "bbox": [[172.9, 1.3, 173, 1.4]]
+      "bbox": [
+        [
+          172.9,
+          1.3,
+          173,
+          1.4
+        ]
+      ]
     },
     "temporal": {
-      "interval": [["2015-06-23T00:00:00Z", null]]
+      "interval": [
+        [
+          "2015-06-23T00:00:00Z",
+          null
+        ]
+      ]
     }
   },
   "item_assets": {
     "video": {
       "type": "video/mp2t",
       "title": "A video asset",
-      "roles": ["data"]
+      "roles": [
+        "data"
+      ]
     },
     "video:frame_centers": {
       "title": "frame_centers",
@@ -41,7 +55,9 @@
       "minimum": 25,
       "maximum": 35
     },
-    "video:codec_name": ["avc1"],
+    "video:codec_name": [
+      "avc1"
+    ],
     "datetime": {
       "minimum": "2015-06-23T00:00:00Z",
       "maximum": "2019-07-10T13:44:56Z"
