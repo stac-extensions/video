@@ -1,0 +1,76 @@
+{
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/video/v1.0.0/schema.json"
+  ],
+  "type": "Collection",
+  "id": "collection",
+  "title": "A title",
+  "description": "A description",
+  "license": "Apache-2.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          172.9,
+          1.3,
+          173,
+          1.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2015-06-23T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "item_assets": {
+    "video": {
+      "type": "video/mp2t",
+      "title": "A video asset",
+      "roles": [
+        "data"
+      ]
+    },
+    "video:frame_centers": {
+      "title": "frame_centers",
+      "type": "application/geo+json"
+    },
+    "video:frame_geometries": {
+      "title": "frame_geometries",
+      "type": "application/geo+json"
+    },
+    "video:sensor_centers": {
+      "title": "sensor_centers",
+      "type": "application/geo+json"
+    }
+  },
+  "summaries": {
+    "video:frame_rate": {
+      "minimum": 25,
+      "maximum": 35
+    },
+    "video:codec_name": [
+      "avc1"
+    ],
+    "datetime": {
+      "minimum": "2015-06-23T00:00:00Z",
+      "maximum": "2019-07-10T13:44:56Z"
+    }
+  },
+  "links": [
+    {
+      "href": "https://example.com/examples/collection.json",
+      "rel": "self"
+    },
+    {
+      "href": "https://example.com/examples/item.json",
+      "rel": "item"
+    }
+  ]
+}

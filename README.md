@@ -3,7 +3,7 @@
 - **Title:** Video
 - **Identifier:** <https://stac-extensions.github.io/video/v1.0.0/schema.json>
 - **Field Name Prefix:** video
-- **Scope:** Item
+- **Scope:** Item, Collection
 - **Extension [Maturity Classification](https://github.com/radiantearth/stac-spec/tree/master/extensions/README.md#extension-maturity):** Proposal
 - **Owner**: @darrenwiens
 
@@ -13,19 +13,20 @@ The motivation behind this extension is to provide a standardized way to include
 
 - Examples:
   - [Item example](examples/item.json): Shows the basic usage of the extension in a STAC Item
+  - [Collection example](examples/collection.json): Shows the basic usage of the extension in a STAC Collection
 - [JSON Schema](json-schema/schema.json)
 - [Changelog](./CHANGELOG.md)
 
 ## Item Properties
 
-| Field Name           | Type       | Description                                                                                                                                  |
-| -------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| video:shape          | \[integer] | **REQUIRED**. Pixel dimensions of video, expressed as `[rows, columns]`                                                                      |
-| video:frame_rate     | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame_rate` or `video:frame_count` are highly recommended. |
-| video:frame_count    | integer    | The count of frames in the video. Either `video:frame_rate` or `video:frame_count` are highly recommended.                                   |
-| video:codec_name     | string     | Four-letter codec code ([list](https://mp4ra.org/#/codecs#))                                                                                 |
-| video:constant_scene | boolean    | Flag indicating that both the frame geometries and sensor centers remain constant throughout the video. Default is `false`.                  |
-| video:letterbox      | \[integer] | Rectangular window containing useful (non-fill) pixel values, if different from `video:shape`, in the form `[columns_offset, rows_offset, width, height]`                     |
+| Field Name           | Type       | Description                                                                                                                                               |
+| -------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| video:shape          | \[integer] | **REQUIRED**. Pixel dimensions of video, expressed as `[rows, columns]`                                                                                   |
+| video:frame_rate     | number     | The mean frame rate, frames per second (frame count / time extent). Either `video:frame_rate` or `video:frame_count` are highly recommended.              |
+| video:frame_count    | integer    | The count of frames in the video. Either `video:frame_rate` or `video:frame_count` are highly recommended.                                                |
+| video:codec_name     | string     | Four-letter codec code ([list](https://mp4ra.org/#/codecs#))                                                                                              |
+| video:constant_scene | boolean    | Flag indicating that both the frame geometries and sensor centers remain constant throughout the video. Default is `false`.                               |
+| video:letterbox      | \[integer] | Rectangular window containing useful (non-fill) pixel values, if different from `video:shape`, in the form `[columns_offset, rows_offset, width, height]` |
 
 ### Assets
 
