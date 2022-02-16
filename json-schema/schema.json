@@ -27,11 +27,6 @@
                   "$ref": "#/definitions/fields"
                 }
               ]
-            },
-            "assets": {
-              "$comment": "This validates the fields in Item Assets, but does not require them.",
-              "type": "object",
-              "required": ["video"]
             }
           }
         }
@@ -60,19 +55,6 @@
           "properties": {
             "summaries": {
               "$ref": "#/definitions/require_any_field"
-            }
-          }
-        },
-        {
-          "$comment": "This is the schema for the fields in Item Asset Definitions. `video` item asset is required.",
-          "required": ["item_assets"],
-          "properties": {
-            "item_assets": {
-              "type": "object",
-              "properties": {
-                "video": { "type": "object" }
-              },
-              "required": ["video"]
             }
           }
         }

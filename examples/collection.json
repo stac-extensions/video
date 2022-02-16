@@ -30,24 +30,37 @@
     }
   },
   "item_assets": {
-    "video": {
+    "video1": {
       "type": "video/mp2t",
       "title": "A video asset",
       "roles": [
-        "data"
+        "data",
+        "video"
       ]
     },
-    "video:frame_centers": {
+    "video1:frame_centers": {
       "title": "frame_centers",
-      "type": "application/geo+json"
+      "type": "application/geo+json",
+      "roles": [
+        "metadata",
+        "video:frame_centers"
+      ]
     },
-    "video:frame_geometries": {
+    "video1:frame_geometries": {
       "title": "frame_geometries",
-      "type": "application/geo+json"
+      "type": "application/geo+json",
+      "roles": [
+        "metadata",
+        "video:frame_geometries"
+      ]
     },
-    "video:sensor_centers": {
+    "video1:sensor_centers": {
       "title": "sensor_centers",
-      "type": "application/geo+json"
+      "type": "application/geo+json",
+      "roles": [
+        "metadata",
+        "video:sensor_centers"
+      ]
     }
   },
   "summaries": {
