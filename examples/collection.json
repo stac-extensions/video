@@ -35,7 +35,8 @@
       "title": "A video asset",
       "roles": [
         "data",
-        "video"
+        "video",
+        "group:video1"
       ]
     },
     "video1:frame_centers": {
@@ -43,7 +44,8 @@
       "type": "application/geo+json",
       "roles": [
         "metadata",
-        "video:frame_centers"
+        "video:frame_centers",
+        "group:video1"
       ]
     },
     "video1:frame_geometries": {
@@ -51,7 +53,8 @@
       "type": "application/geo+json",
       "roles": [
         "metadata",
-        "video:frame_geometries"
+        "video:frame_geometries",
+        "group:video1"
       ]
     },
     "video1:sensor_centers": {
@@ -59,7 +62,8 @@
       "type": "application/geo+json",
       "roles": [
         "metadata",
-        "video:sensor_centers"
+        "video:sensor_centers",
+        "group:video1"
       ]
     }
   },
