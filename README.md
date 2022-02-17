@@ -30,13 +30,13 @@ The motivation behind this extension is to provide a standardized way to include
 
 ### Assets
 
-Video assets should be differentiated by asset roles. Assets may be named arbitrarily, but it is recommended to loosely group associated assets by the asset name (e.g. assets named `"video1", "video1:frame_geometries", "video2", "video2:frame_geometries"`)
+Video assets should be differentiated by asset roles. Assets may be named arbitrarily and must be unique, but it is recommended to group associated assets with a common asset role (e.g. `"group:video1"`)
 | Asset Roles | Description |
 | -------------------- | -------------------------------------------- |
-| \["data", "video"] | Video asset. |
-| \["metadata", "video:frame_geometries"] | Asset containing polygon geometry(s) representing the corners of video frames. This should be a feature collection containing: 1 polygon if `video:constant_scene=true`, or n polygons, where `n=video:frame_count` if `video:constant_scene=false`. |
-| \["metadata", "video:frame_centers"] | Asset containing point geometry(s) representing the center of video frames. This should be a feature collection containing: 1 point if `video:constant_scene=true`, or n points, where `n=video:frame_count` if `video:constant_scene=false`. |
-| \["metadata", "video:sensor_centers"] | Asset containing point geometry(s) representing the location of the sensor. This should be a feature collection containing: 1 point if `video:constant_scene=true`, or n points, where `n=video:frame_count` if `video:constant_scene=false` |
+| \["data", "video", "group:groupname"] | Video asset. |
+| \["metadata", "video:frame_geometries", "group:groupname"] | Asset containing polygon geometry(s) representing the corners of video frames. This should be a feature collection containing: 1 polygon if `video:constant_scene=true`, or n polygons, where `n=video:frame_count` if `video:constant_scene=false`. |
+| \["metadata", "video:frame_centers", "group:groupname"] | Asset containing point geometry(s) representing the center of video frames. This should be a feature collection containing: 1 point if `video:constant_scene=true`, or n points, where `n=video:frame_count` if `video:constant_scene=false`. |
+| \["metadata", "video:sensor_centers", "group:groupname"] | Asset containing point geometry(s) representing the location of the sensor. This should be a feature collection containing: 1 point if `video:constant_scene=true`, or n points, where `n=video:frame_count` if `video:constant_scene=false` |
 
 ## Contributing
 
