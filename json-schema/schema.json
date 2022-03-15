@@ -94,6 +94,12 @@
         },
         {
           "required": ["video:letterbox"]
+        },
+        {
+          "required": ["video:sensor_name"]
+        },
+        {
+          "required": ["video:miis_core_id"]
         }
       ]
     },
@@ -127,6 +133,12 @@
           },
           "minItems": 4,
           "maxItems": 4
+        },
+        "video:sensor_name": {
+          "type": "string"
+        },
+        "video:miis_core_id": {
+          "type": "string"
         }
       },
       "patternProperties": {

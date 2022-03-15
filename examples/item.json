@@ -21,6 +21,8 @@
       1920
     ],
     "video:codec_name": "avc1",
+    "video:sensor_name": "IR Mitsubishi PtSi Model 500",
+    "video:miis_core_id": "0170 F592 F023 7336 4AF8 AA91 62C0 0F2E B2DA 16B7 4341 0008 41A0 BE36 5B5A B96A 3645",
     "datetime": "2012-09-19T20:50:26.484970Z"
   },
   "geometry": {
