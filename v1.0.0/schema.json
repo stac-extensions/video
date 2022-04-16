@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://stac-extensions.github.io/video/v1.0.0/schema.json#",
+  "title": "Video Extension",
+  "description": "STAC Video Extension for STAC Items and STAC Collections.",
+  "oneOf": [
+    {
+      "$comment": "This is the schema for STAC Items. Remove this object if this extension only applies to Collections.",
+      "allOf": [
+        {
+          "$ref": "#/definitions/stac_extensions"
+        },
+        {
+          "type": "object",
+          "required": ["type", "properties", "assets"],
+          "properties": {
+            "type": {
+              "const": "Feature"
+            },
+            "properties": {
+              "allOf": [
+                {
+                  "$comment": "Require fields here for Item Properties.",
+                  "required": ["video:shape"]
+                },
+                {
+                  "$ref": "#/definitions/fields"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "$comment": "This is the schema for STAC Collections.",
+      "type": "object",
+      "allOf": [
+        {
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "const": "Collection"
+            }
+          }
+        },
+        {
+          "$ref": "#/definitions/stac_extensions"
+        }
+      ],
+      "anyOf": [
+        {
+          "$comment": "This is the schema for the fields in Summaries. By default, only checks the existance of the properties, but not the schema of the summaries.",
+          "required": ["summaries"],
+          "properties": {
+            "summaries": {
+              "$ref": "#/definitions/require_any_field"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "definitions": {
+    "stac_extensions": {
+      "type": "object",
+      "required": ["stac_extensions"],
+      "properties": {
+        "stac_extensions": {
+          "type": "array",
+          "contains": {
+            "const": "https://stac-extensions.github.io/video/v1.0.0/schema.json"
+          }
+        }
+      }
+    },
+    "require_any_field": {
+      "$comment": "Please list all fields here so that we can force the existance of one of them in other parts of the schemas.",
+      "anyOf": [
+        {
+          "required": ["video:frame_rate"]
+        },
+        {
+          "required": ["video:frame_count"]
+        },
+        {
+          "required": ["video:shape"]
+        },
+        {
+          "required": ["video:codec_name"]
+        },
+        {
+          "required": ["video:constant_scene"]
+        },
+        {
+          "required": ["video:letterbox"]
+        },
+        {
+          "required": ["video:sensor_name"]
+        },
+        {
+          "required": ["video:miis_core_id"]
+        }
+      ]
+    },
+    "fields": {
+      "$comment": "Add your new fields here. Don't require them here, do that above in the corresponding schema.",
+      "type": "object",
+      "properties": {
+        "video:frame_rate": {
+          "type": "number"
+        },
+        "video:frame_count": {
+          "type": "integer"
+        },
+        "video:shape": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "video:codec_name": {
+          "type": "string"
+        },
+        "video:constant_scene": {
+          "type": "boolean",
+          "default": false
+        },
+        "video:letterbox": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "video:sensor_name": {
+          "type": "string"
+        },
+        "video:miis_core_id": {
+          "type": "string"
+        }
+      },
+      "patternProperties": {
+        "^(?!video:)": {
+          "$comment": "Above, change `template` to the prefix of this extension"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
