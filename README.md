@@ -27,8 +27,8 @@ The motivation behind this extension is to provide a standardized way to include
 | video:codec_name     | string     | Four-letter codec code ([list](https://mp4ra.org/#/codecs#))                                                                                              |
 | video:constant_scene | boolean    | Flag indicating that both the frame geometries and sensor centers remain constant throughout the video. Default is `false`.                               |
 | video:letterbox      | \[integer] | Rectangular window containing useful (non-fill) pixel values, if different from `video:shape`, in the form `[columns_offset, rows_offset, width, height]` |
-| video:sensor_name    | string     | Image source sensor name (corresponds to MISB ST 0601.17.11)                                                                                              |
-| video:miis_core_id   | string     | MIIS core identifier (corresponds to MISB ST 0601.17.94)                                                                                                  |
+| video:sensor_name    | string     | Image source sensor name (corresponds to [MISB ST 0601.17.11](https://nsgreg.nga.mil/doc/view?i=5093))                                                                                              |
+| video:miis_core_id   | string     | MIIS core identifier (corresponds to [MISB ST 0601.17.94](https://nsgreg.nga.mil/doc/view?i=5093))                                                                                                  |
 
 ### Assets
 
